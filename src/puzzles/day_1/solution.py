@@ -13,6 +13,33 @@ def sum_calibration_values(lines: List[str]):
     return sum
 
 
+def sum_calibration_values2(lines: List[str]):
+    sum = 0
+    d = {
+        "one": 1,
+        "two": 2,
+        "three": 3,
+        "four": 4,
+        "five": 5,
+        "six": 6,
+        "seven": 7,
+        "eight": 8,
+        "nine": 9,
+    }
+    for line in lines:
+        ints = ""
+        for i, j in enumerate(line):
+            if j.isnumeric():
+                ints += j
+            else:
+                for key, value in d.items():
+                    if line[i:].startswith(key):
+                        ints += str(value)
+        sum += int("".join([ints[0], ints[-1]]))
+    print(sum)
+    return sum
+
+
 def get_input(filepath: str):
     with open(filepath) as f:
         return f.readlines()
@@ -20,3 +47,4 @@ def get_input(filepath: str):
 
 if __name__ == "__main__":
     sum_calibration_values(get_input("src/puzzles/day_1/input.txt"))
+    sum_calibration_values2(get_input("src/puzzles/day_1/input.txt"))
