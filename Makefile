@@ -6,6 +6,10 @@ new_day:
         echo "DAY is not set"; \
         exit 1; \
     fi
+	@if [ -d "src/day_$(DAY)" ]; then \
+        echo "Day $(DAY) already exists"; \
+        exit 1; \
+    fi
 	@mkdir -p src/day_$(DAY)
 	@touch src/day_$(DAY)/__init__.py
 	@touch src/day_$(DAY)/input.txt
