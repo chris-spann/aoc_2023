@@ -1,4 +1,4 @@
-from src.puzzles.day_1.solution import sum_calibration_values, sum_calibration_values2
+from src.day_1.solution import sum_calibration_values, sum_calibration_values2
 
 
 def test_sum_calibration_values():

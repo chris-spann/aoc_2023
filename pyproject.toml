@@ -4,11 +4,12 @@ version = "0.1.0"
 description = ""
 authors = ["Chris Spann <cspanndev@gmail.com>"]
 readme = "README.md"
-packages = [{include = "aoc_2023", from = "src"}, {include="puzzles", from="src"}]
+packages = [{ include = "src", from = "." }, { include = "*", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
 pytest = "^7.4.3"
+pytest-cov = "^4.1.0"
 
 
 [build-system]

@@ -1,5 +1,7 @@
 from typing import List
 
+from src.utils import get_input
+
 
 def sum_calibration_values(lines: List[str]):
     sum = 0
@@ -40,11 +42,6 @@ def sum_calibration_values2(lines: List[str]):
     return sum
 
 
-def get_input(filepath: str):
-    with open(filepath) as f:
-        return f.readlines()
-
-
 if __name__ == "__main__":
-    sum_calibration_values(get_input("src/puzzles/day_1/input.txt"))
-    sum_calibration_values2(get_input("src/puzzles/day_1/input.txt"))
+    sum_calibration_values(get_input("day_1/input.txt"))
+    sum_calibration_values2(get_input("day_1/input.txt"))
