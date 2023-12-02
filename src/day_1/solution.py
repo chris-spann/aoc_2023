@@ -43,5 +43,6 @@ def sum_calibration_values2(lines: List[str]):
 
 
 if __name__ == "__main__":
-    sum_calibration_values(get_input(__file__))
-    sum_calibration_values2(get_input(__file__))
+    lines = get_input(__file__)
+    sum_calibration_values(lines)
+    sum_calibration_values2(lines)

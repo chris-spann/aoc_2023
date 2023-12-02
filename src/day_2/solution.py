@@ -20,7 +20,7 @@ def sum_valid_game_ids(lines: List[str]):
         if is_allowed:
             sum += int(game_id)
 
-    print(f"sum: {sum}")
+    print(sum)
     return sum
 
 
@@ -38,10 +38,11 @@ def sum_minimum_cubes_power(lines: List[str]):
                 if int(cubes) > cubes_needed[color]:
                     cubes_needed[color] = int(cubes)
         sum += cubes_needed["blue"] * cubes_needed["green"] * cubes_needed["red"]
-    print(f"sum: {sum}")
+    print(sum)
     return sum
 
 
 if __name__ == "__main__":
-    sum_valid_game_ids(get_input(__file__))
-    sum_minimum_cubes_power(get_input(__file__))
+    lines = get_input(__file__)
+    sum_valid_game_ids(lines)
+    sum_minimum_cubes_power(lines)
