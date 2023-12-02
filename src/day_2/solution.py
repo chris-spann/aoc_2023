@@ -38,10 +38,10 @@ def sum_minimum_cubes_power(lines: List[str]):
                 if int(cubes) > cubes_needed[color]:
                     cubes_needed[color] = int(cubes)
         sum += cubes_needed["blue"] * cubes_needed["green"] * cubes_needed["red"]
-    print(f" da sum: {sum}")
+    print(f"sum: {sum}")
     return sum
 
 
 if __name__ == "__main__":
-    sum_valid_game_ids(get_input("day_2/input.txt"))
-    sum_minimum_cubes_power(get_input("day_2/input.txt"))
+    sum_valid_game_ids(get_input(__file__))
+    sum_minimum_cubes_power(get_input(__file__))

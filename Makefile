@@ -1,10 +1,11 @@
 test:
-    @pytest -v --cov=src --cov-report=term-missing
+	@poetry run pytest -v --cov=src --cov-report=term-missing
 
 new_day:
-ifndef DAY
-    $(error DAY is not set)
-endif
+	@if [ -z "$(DAY)" ]; then \
+        echo "DAY is not set"; \
+        exit 1; \
+    fi
 	@mkdir -p src/day_$(DAY)
 	@touch src/day_$(DAY)/__init__.py
 	@touch src/day_$(DAY)/input.txt

@@ -43,5 +43,5 @@ def sum_calibration_values2(lines: List[str]):
 
 
 if __name__ == "__main__":
-    sum_calibration_values(get_input("day_1/input.txt"))
-    sum_calibration_values2(get_input("day_1/input.txt"))
+    sum_calibration_values(get_input(__file__))
+    sum_calibration_values2(get_input(__file__))
