@@ -42,7 +42,7 @@ def sum_calibration_values2(lines: List[str]):
     return sum
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     lines = get_input(__file__)
     sum_calibration_values(lines)
     sum_calibration_values2(lines)

@@ -42,7 +42,7 @@ def sum_minimum_cubes_power(lines: List[str]):
     return sum
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":  # pragma: no cover
     lines = get_input(__file__)
     sum_valid_game_ids(lines)
     sum_minimum_cubes_power(lines)
