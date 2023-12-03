@@ -22,4 +22,13 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
-
+    - name: Install dependencies
+      run: make install
+    - name: Format
+      run: make format
+    - name: Lint
+      run: make lint
+    - name: Typecheck
+      run: make types
+    - name: Unit Tests
+      run: make test
