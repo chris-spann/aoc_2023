@@ -1,3 +1,8 @@
+install:
+	pip install --upgrade pip &&\
+		pip install poetry &&\
+			poetry install
+
 test:
 	@poetry run pytest
 
