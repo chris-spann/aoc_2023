@@ -9,15 +9,20 @@ repos:
     rev: v0.1.6
     hooks:
       - id: ruff
-        args: [ --fix ]
+        entry: make lint
       - id: ruff-format
+        entry: make format
   - repo: local
     hooks:
       - id: pytest
-        name: Pytest and Coverage
+        name: pytest
         description: 100% coverage
         entry: make test
         language: system
         pass_filenames: false
         always_run: true
         types: [python]
+      - id: pyright
+        name: pyright
+        entry: make types
+        language: python

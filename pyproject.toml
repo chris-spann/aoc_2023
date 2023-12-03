@@ -12,12 +12,21 @@ pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
 pre-commit = "^3.5.0"
 ruff = "^0.1.6"
+pyright = "^1.1.338"
 
 [tool.pytest.ini_options]
 addopts = "-v --cov=src --cov-report=term-missing --cov-fail-under=100"
 
 [tool.coverage.run]
 omit = ["*/__init__.py"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.pyright]
+include = ["src"]
+exclude = ["**/node_modules", "**/__pycache__"]
+venvPath = ".venv"
 
 [build-system]
 requires = ["poetry-core"]

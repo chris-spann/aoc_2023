@@ -1,6 +1,15 @@
 test:
 	@poetry run pytest
 
+format:
+	@poetry run ruff format --check --preview .
+
+lint:
+	@poetry run ruff check . --fix
+
+types:
+	@poetry run pyright
+
 new_day:
 	@if [ -z "$(DAY)" ]; then \
         echo "DAY is not set"; \
