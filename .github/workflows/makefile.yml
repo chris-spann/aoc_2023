@@ -8,12 +8,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         python-version: ["3.11", "3.12"]
-
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python ${{ matrix.python-version }}
@@ -23,7 +21,8 @@ jobs:
     - name: Display Python version
       run: python -c "import sys; print(sys.version)"
     - name: Install dependencies
-      run: make install
+      run: |
+        make install
     - name: Format
       run: make format
     - name: Lint
